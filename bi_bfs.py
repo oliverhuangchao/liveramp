@@ -4,18 +4,14 @@
 class Nodes:
 	def __init__(self,value):
 		self.value = value
-		#self.visited = False
 		self.neighbour = []
-		#self.next_list = []
 		self.pre = None
-		#self.next = None
 
 	def __hash__(self):
 		return self.value
-		
+
 def printpath(start,end):
 	res = []
-	#res.append(end)
 	curr = end
 	while curr:
 		res.append(curr)
@@ -28,8 +24,6 @@ def printpath(start,end):
 def bi-bfs(start,end,g):
 	start_list = collections.deque()
 	end_list = collections.deque()
-	#start.visited = True
-	#end.visited = True
 	check_start = set()# two map for checking wether the current node is alread checked or not
 	check_end = set()
 	check_end.add(end)
